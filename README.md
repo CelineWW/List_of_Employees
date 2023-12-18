@@ -241,16 +241,16 @@ display_menu();
     ```
 
 ### Data Validation
-    1. file name (look for external data source)
-    2. menu option (default case)
-    3. ID (number, 0 ~ 99)
-    4. ssn (4 digit number: 0 <= ssn < 10000)
-    5. wage (3 digit number: 0 <= wage < 1000)
-    6. hire year (number: 1799 < hire year < 2025)
-    7. hire month (number: 0 < hire month < 13)
-    8. hire day (number: 0 < hire day < 31)
-    9. add row number (row_add < employees.size() + 1)
-    10. search employee (id match and employee match)
+1. file name (look for external data source)
+2. menu option (default case)
+3. ID (number, 0 ~ 99)
+4. ssn (4 digit number: 0 <= ssn < 10000)
+5. wage (3 digit number: 0 <= wage < 1000)
+6. hire year (number: 1799 < hire year < 2025)
+7. hire month (number: 0 < hire month < 13)
+8. hire day (number: 0 < hire day < 31)
+9. add row number (row_add < employees.size() + 1)
+10. search employee (id match and employee match)
     ```
     void search_employee(const vector<Employee>& employees){
         Employee employee_search;
@@ -278,11 +278,11 @@ display_menu();
         }
     }
     ```
-    11. update employee (id match and employee match)
-    12. delete employee (id match and employee match)
+11. update employee (id match and employee match)
+12. delete employee (id match and employee match)
 
 ### Formatting
-    1. Tabulea table of list of employees
+1. Tabulea table of list of employees
     ```
     cout << setw(6) << left << "ID"
     << setw(16) << left << "Employee Name"
@@ -292,9 +292,8 @@ display_menu();
     << setw(14) << left << "Department"
     << setw(18) << left << "Hired Date"
     << endl;
-```
-
-    2. Hire date
+    ```
+2. Hire date
     - option 1:
     ```
     << Employee::map_month(e.get_hire_month()) << " " << setw(2) << setfill('0')
@@ -310,7 +309,7 @@ display_menu();
     else if (hire_day <= 9){
         hire_date = map_month(hire_month) + " 0" + to_string(hire_day) + ", " + to_string(hire_year);
     }
-    ```
+```
 
 ![PA15_list_of_employees_RUN_1.png](https://github.com/CelineWW/CPP_Programming/blob/main/PA15_list_of_employees/PA15_list_of_employees_RUN_1.png)
 ![PA15_list_of_employees_RUN_2.png](https://github.com/CelineWW/CPP_Programming/blob/main/PA15_list_of_employees/PA15_list_of_employees_RUN_2.png)
