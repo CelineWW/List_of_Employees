@@ -12,7 +12,7 @@ Table of Contents
    * [Data Validation](#data_validation)
    * [Formatting](#formatting)
    * [Sample Run](#sample_run)
-5. [Summary](#summary)
+4. [Summary](#summary)
 
 ## Overview
 
