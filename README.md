@@ -11,6 +11,7 @@ Table of Contents
    * [File I/O](#file_i\o)
    * [Data Validation](#data_validation)
    * [Formatting](#formatting)
+   * [Sample Run](#sample_run)
 5. [Summary](#summary)
 
 ## Overview
@@ -48,6 +49,8 @@ Each employee has the following attributes:
     - hire year
     - hire month
     - hire day
+
+![PA15_list_of_employees_RUN_11.png](https://github.com/CelineWW/List_of_Employees/blob/main/PA15_list_of_employees_RUN_11.png)
 
 ### Employee Class
 Member and member functions in Emloyee Class
@@ -94,38 +97,7 @@ Member and member functions in Emloyee Class
 ```
 
 ### Operation Menu
-```
-display_menu();
-        cout << "Enter your choice (1-8): ";
-        cin >> choice;
-        switch (choice) {
-            case 1:
-                add_employee(employees);
-                break;
-            case 2:
-                search_employee(employees);
-                break;
-            case 3:
-                display_employees(employees);
-                break;
-            case 4:
-                update_employee(employees);
-                break;
-            case 5:
-                delete_employee(employees);
-                break;
-            case 6:
-                write_file(employees);
-                break;
-            case 7:
-                read_file(employees);
-                break;
-            case 8:
-                break;
-            default:
-                cout << "Invalid choice! Back to Menu!";
-        }
-```
+![PA15_list_of_employees_RUN_10.png](https://github.com/CelineWW/List_of_Employees/blob/main/PA15_list_of_employees_RUN_10.png)
 
 ### Functions in main.cpp
 -  Regular functions
@@ -283,16 +255,7 @@ display_menu();
 
 ### Formatting
 1. Tabulea table of list of employees
-    ```
-    cout << setw(6) << left << "ID"
-    << setw(16) << left << "Employee Name"
-    << setw(4) << right << "SSN"
-    << setw(9) << right << "Wage"
-    << setw(4) << "    "
-    << setw(14) << left << "Department"
-    << setw(18) << left << "Hired Date"
-    << endl;
-    ```
+![PA15_list_of_employees_RUN_9.png](https://github.com/CelineWW/List_of_Employees/blob/main/PA15_list_of_employees_RUN_9.png)
 2. Hire date
     - option 1:
     ```
@@ -309,8 +272,9 @@ display_menu();
     else if (hire_day <= 9){
         hire_date = map_month(hire_month) + " 0" + to_string(hire_day) + ", " + to_string(hire_year);
     }
-```
+    ```
 
+### Sample Run
 ![PA15_list_of_employees_RUN_1.png](https://github.com/CelineWW/CPP_Programming/blob/main/PA15_list_of_employees/PA15_list_of_employees_RUN_1.png)
 ![PA15_list_of_employees_RUN_2.png](https://github.com/CelineWW/CPP_Programming/blob/main/PA15_list_of_employees/PA15_list_of_employees_RUN_2.png)
 ![PA15_list_of_employees_RUN_3.png](https://github.com/CelineWW/CPP_Programming/blob/main/PA15_list_of_employees/PA15_list_of_employees_RUN_3.png)
@@ -319,3 +283,10 @@ display_menu();
 ![PA15_list_of_employees_RUN_6.png](https://github.com/CelineWW/CPP_Programming/blob/main/PA15_list_of_employees/PA15_list_of_employees_RUN_6.png)
 ![PA15_list_of_employees_RUN_7.png](https://github.com/CelineWW/CPP_Programming/blob/main/PA15_list_of_employees/PA15_list_of_employees_RUN_7.png)
 ![PA15_list_of_employees_RUN_8.png](https://github.com/CelineWW/CPP_Programming/blob/main/PA15_list_of_employees/PA15_list_of_employees_RUN_8.png)
+
+## Summary
+1. This program can easily add, search, edit, delete employee attributes in the list from the external files. However, some details need to be added for advanced usage of the program.
+2. Maximum ID currently set as 99. If larger population added, ID has to accept 3 or 4 digit numbers.
+3. Hire date accept any number between 1 ~ 31 for any combination of year, month, and day. Day of month (Lunar month - 30 days, Solar month - 31 days, Feburay - 28/29 days) and leap year is not verified. 
+4. If the user attend to search employee, they can only search by employee ID. If ID is unknown, they have to display employee list first. This is not friendly to large dataset. Adding more searchin critiria (such as, employee name, hire date) can power up the program.
+
